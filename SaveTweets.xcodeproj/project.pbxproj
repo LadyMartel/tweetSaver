@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		974CE42F199585AC00C86B0A /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974CE42E199585AC00C86B0A /* Storyboard.storyboard */; };
+		974CE4321995898700C86B0A /* STMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 974CE4311995898700C86B0A /* STMainViewController.m */; };
+		974CE435199589DC00C86B0A /* STTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 974CE434199589DC00C86B0A /* STTableViewController.m */; };
+		974CE43819958AED00C86B0A /* STTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 974CE43719958AED00C86B0A /* STTweet.m */; };
+		97A546F31995999F00808CB0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A546F21995999F00808CB0 /* Accounts.framework */; };
+		97A546F5199599A600808CB0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A546F4199599A600808CB0 /* Social.framework */; };
+		97ECED0019933576000DE4CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97ECECFF19933576000DE4CE /* Foundation.framework */; };
+		97ECED0219933576000DE4CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97ECED0119933576000DE4CE /* CoreGraphics.framework */; };
+		97ECED0419933576000DE4CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97ECED0319933576000DE4CE /* UIKit.framework */; };
+		97ECED0619933576000DE4CE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97ECED0519933576000DE4CE /* CoreData.framework */; };
+		97ECED0C19933576000DE4CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97ECED0A19933576000DE4CE /* InfoPlist.strings */; };
+		97ECED0E19933576000DE4CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97ECED0D19933576000DE4CE /* main.m */; };
+		97ECED1219933576000DE4CE /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97ECED1119933576000DE4CE /* STAppDelegate.m */; };
+		97ECED1519933576000DE4CE /* SaveTweets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 97ECED1319933576000DE4CE /* SaveTweets.xcdatamodeld */; };
+		97ECED1719933576000DE4CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97ECED1619933576000DE4CE /* Images.xcassets */; };
+		97ECED1E19933576000DE4CE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97ECED1D19933576000DE4CE /* XCTest.framework */; };
+		97ECED1F19933576000DE4CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97ECECFF19933576000DE4CE /* Foundation.framework */; };
+		97ECED2019933576000DE4CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97ECED0319933576000DE4CE /* UIKit.framework */; };
+		97ECED2119933576000DE4CE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97ECED0519933576000DE4CE /* CoreData.framework */; };
+		97ECED2919933576000DE4CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97ECED2719933576000DE4CE /* InfoPlist.strings */; };
+		97ECED2B19933576000DE4CE /* SaveTweetsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97ECED2A19933576000DE4CE /* SaveTweetsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97ECED2219933576000DE4CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97ECECF419933576000DE4CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97ECECFB19933576000DE4CE;
+			remoteInfo = SaveTweets;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		974CE42E199585AC00C86B0A /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		974CE4301995898700C86B0A /* STMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMainViewController.h; sourceTree = "<group>"; };
+		974CE4311995898700C86B0A /* STMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMainViewController.m; sourceTree = "<group>"; };
+		974CE433199589DC00C86B0A /* STTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTableViewController.h; sourceTree = "<group>"; };
+		974CE434199589DC00C86B0A /* STTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTableViewController.m; sourceTree = "<group>"; };
+		974CE43619958AED00C86B0A /* STTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTweet.h; sourceTree = "<group>"; };
+		974CE43719958AED00C86B0A /* STTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTweet.m; sourceTree = "<group>"; };
+		97A546F21995999F00808CB0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		97A546F4199599A600808CB0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		97ECECFC19933576000DE4CE /* SaveTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97ECECFF19933576000DE4CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		97ECED0119933576000DE4CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		97ECED0319933576000DE4CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		97ECED0519933576000DE4CE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		97ECED0919933576000DE4CE /* SaveTweets-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SaveTweets-Info.plist"; sourceTree = "<group>"; };
+		97ECED0B19933576000DE4CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		97ECED0D19933576000DE4CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		97ECED0F19933576000DE4CE /* SaveTweets-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SaveTweets-Prefix.pch"; sourceTree = "<group>"; };
+		97ECED1019933576000DE4CE /* STAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAppDelegate.h; sourceTree = "<group>"; };
+		97ECED1119933576000DE4CE /* STAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STAppDelegate.m; sourceTree = "<group>"; };
+		97ECED1419933576000DE4CE /* SaveTweets.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SaveTweets.xcdatamodel; sourceTree = "<group>"; };
+		97ECED1619933576000DE4CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		97ECED1C19933576000DE4CE /* SaveTweetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaveTweetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97ECED1D19933576000DE4CE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		97ECED2619933576000DE4CE /* SaveTweetsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SaveTweetsTests-Info.plist"; sourceTree = "<group>"; };
+		97ECED2819933576000DE4CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		97ECED2A19933576000DE4CE /* SaveTweetsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaveTweetsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97ECECF919933576000DE4CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97ECED0619933576000DE4CE /* CoreData.framework in Frameworks */,
+				97A546F5199599A600808CB0 /* Social.framework in Frameworks */,
+				97A546F31995999F00808CB0 /* Accounts.framework in Frameworks */,
+				97ECED0219933576000DE4CE /* CoreGraphics.framework in Frameworks */,
+				97ECED0419933576000DE4CE /* UIKit.framework in Frameworks */,
+				97ECED0019933576000DE4CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97ECED1919933576000DE4CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97ECED1E19933576000DE4CE /* XCTest.framework in Frameworks */,
+				97ECED2119933576000DE4CE /* CoreData.framework in Frameworks */,
+				97ECED2019933576000DE4CE /* UIKit.framework in Frameworks */,
+				97ECED1F19933576000DE4CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		97ECECF319933576000DE4CE = {
+			isa = PBXGroup;
+			children = (
+				97ECED0719933576000DE4CE /* SaveTweets */,
+				97ECED2419933576000DE4CE /* SaveTweetsTests */,
+				97ECECFE19933576000DE4CE /* Frameworks */,
+				97ECECFD19933576000DE4CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		97ECECFD19933576000DE4CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97ECECFC19933576000DE4CE /* SaveTweets.app */,
+				97ECED1C19933576000DE4CE /* SaveTweetsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97ECECFE19933576000DE4CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97A546F4199599A600808CB0 /* Social.framework */,
+				97A546F21995999F00808CB0 /* Accounts.framework */,
+				97ECECFF19933576000DE4CE /* Foundation.framework */,
+				97ECED0119933576000DE4CE /* CoreGraphics.framework */,
+				97ECED0319933576000DE4CE /* UIKit.framework */,
+				97ECED0519933576000DE4CE /* CoreData.framework */,
+				97ECED1D19933576000DE4CE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97ECED0719933576000DE4CE /* SaveTweets */ = {
+			isa = PBXGroup;
+			children = (
+				97ECED1019933576000DE4CE /* STAppDelegate.h */,
+				97ECED1119933576000DE4CE /* STAppDelegate.m */,
+				974CE43619958AED00C86B0A /* STTweet.h */,
+				974CE43719958AED00C86B0A /* STTweet.m */,
+				974CE4301995898700C86B0A /* STMainViewController.h */,
+				974CE4311995898700C86B0A /* STMainViewController.m */,
+				974CE433199589DC00C86B0A /* STTableViewController.h */,
+				974CE434199589DC00C86B0A /* STTableViewController.m */,
+				974CE42E199585AC00C86B0A /* Storyboard.storyboard */,
+				97ECED1619933576000DE4CE /* Images.xcassets */,
+				97ECED1319933576000DE4CE /* SaveTweets.xcdatamodeld */,
+				97ECED0819933576000DE4CE /* Supporting Files */,
+			);
+			path = SaveTweets;
+			sourceTree = "<group>";
+		};
+		97ECED0819933576000DE4CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				97ECED0919933576000DE4CE /* SaveTweets-Info.plist */,
+				97ECED0A19933576000DE4CE /* InfoPlist.strings */,
+				97ECED0D19933576000DE4CE /* main.m */,
+				97ECED0F19933576000DE4CE /* SaveTweets-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97ECED2419933576000DE4CE /* SaveTweetsTests */ = {
+			isa = PBXGroup;
+			children = (
+				97ECED2A19933576000DE4CE /* SaveTweetsTests.m */,
+				97ECED2519933576000DE4CE /* Supporting Files */,
+			);
+			path = SaveTweetsTests;
+			sourceTree = "<group>";
+		};
+		97ECED2519933576000DE4CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				97ECED2619933576000DE4CE /* SaveTweetsTests-Info.plist */,
+				97ECED2719933576000DE4CE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97ECECFB19933576000DE4CE /* SaveTweets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97ECED2E19933576000DE4CE /* Build configuration list for PBXNativeTarget "SaveTweets" */;
+			buildPhases = (
+				97ECECF819933576000DE4CE /* Sources */,
+				97ECECF919933576000DE4CE /* Frameworks */,
+				97ECECFA19933576000DE4CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SaveTweets;
+			productName = SaveTweets;
+			productReference = 97ECECFC19933576000DE4CE /* SaveTweets.app */;
+			productType = "com.apple.product-type.application";
+		};
+		97ECED1B19933576000DE4CE /* SaveTweetsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97ECED3119933576000DE4CE /* Build configuration list for PBXNativeTarget "SaveTweetsTests" */;
+			buildPhases = (
+				97ECED1819933576000DE4CE /* Sources */,
+				97ECED1919933576000DE4CE /* Frameworks */,
+				97ECED1A19933576000DE4CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97ECED2319933576000DE4CE /* PBXTargetDependency */,
+			);
+			name = SaveTweetsTests;
+			productName = SaveTweetsTests;
+			productReference = 97ECED1C19933576000DE4CE /* SaveTweetsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97ECECF419933576000DE4CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ST;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = LadyMartel;
+				TargetAttributes = {
+					97ECED1B19933576000DE4CE = {
+						TestTargetID = 97ECECFB19933576000DE4CE;
+					};
+				};
+			};
+			buildConfigurationList = 97ECECF719933576000DE4CE /* Build configuration list for PBXProject "SaveTweets" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 97ECECF319933576000DE4CE;
+			productRefGroup = 97ECECFD19933576000DE4CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97ECECFB19933576000DE4CE /* SaveTweets */,
+				97ECED1B19933576000DE4CE /* SaveTweetsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97ECECFA19933576000DE4CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97ECED0C19933576000DE4CE /* InfoPlist.strings in Resources */,
+				97ECED1719933576000DE4CE /* Images.xcassets in Resources */,
+				974CE42F199585AC00C86B0A /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97ECED1A19933576000DE4CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97ECED2919933576000DE4CE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		97ECECF819933576000DE4CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				974CE43819958AED00C86B0A /* STTweet.m in Sources */,
+				974CE4321995898700C86B0A /* STMainViewController.m in Sources */,
+				97ECED0E19933576000DE4CE /* main.m in Sources */,
+				97ECED1519933576000DE4CE /* SaveTweets.xcdatamodeld in Sources */,
+				97ECED1219933576000DE4CE /* STAppDelegate.m in Sources */,
+				974CE435199589DC00C86B0A /* STTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97ECED1819933576000DE4CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97ECED2B19933576000DE4CE /* SaveTweetsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97ECED2319933576000DE4CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97ECECFB19933576000DE4CE /* SaveTweets */;
+			targetProxy = 97ECED2219933576000DE4CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		97ECED0A19933576000DE4CE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97ECED0B19933576000DE4CE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		97ECED2719933576000DE4CE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97ECED2819933576000DE4CE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		97ECED2C19933576000DE4CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		97ECED2D19933576000DE4CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		97ECED2F19933576000DE4CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SaveTweets/SaveTweets-Prefix.pch";
+				INFOPLIST_FILE = "SaveTweets/SaveTweets-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		97ECED3019933576000DE4CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SaveTweets/SaveTweets-Prefix.pch";
+				INFOPLIST_FILE = "SaveTweets/SaveTweets-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		97ECED3219933576000DE4CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SaveTweets.app/SaveTweets";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SaveTweets/SaveTweets-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SaveTweetsTests/SaveTweetsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		97ECED3319933576000DE4CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SaveTweets.app/SaveTweets";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SaveTweets/SaveTweets-Prefix.pch";
+				INFOPLIST_FILE = "SaveTweetsTests/SaveTweetsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		97ECECF719933576000DE4CE /* Build configuration list for PBXProject "SaveTweets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97ECED2C19933576000DE4CE /* Debug */,
+				97ECED2D19933576000DE4CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97ECED2E19933576000DE4CE /* Build configuration list for PBXNativeTarget "SaveTweets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97ECED2F19933576000DE4CE /* Debug */,
+				97ECED3019933576000DE4CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97ECED3119933576000DE4CE /* Build configuration list for PBXNativeTarget "SaveTweetsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97ECED3219933576000DE4CE /* Debug */,
+				97ECED3319933576000DE4CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		97ECED1319933576000DE4CE /* SaveTweets.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				97ECED1419933576000DE4CE /* SaveTweets.xcdatamodel */,
+			);
+			currentVersion = 97ECED1419933576000DE4CE /* SaveTweets.xcdatamodel */;
+			path = SaveTweets.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 97ECECF419933576000DE4CE /* Project object */;
+}
