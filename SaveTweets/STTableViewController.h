@@ -10,7 +10,6 @@
 
 @interface STTableViewController : UITableViewController
 
-
-//-(void)setTitle:(NSString *)title;
+@property (nonatomic, strong) NSArray *tweetsList;
 
 @end

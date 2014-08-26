@@ -7,7 +7,7 @@
 //
 
 #import "STTableViewController.h"
-
+#import "STTweet.h"
 
 @implementation STTableViewController
 
@@ -27,9 +27,9 @@ NSString * _title;
 {
   [super viewDidLoad];
   
-//  if (_title == nil){
-//    _title = @"No Title";
-//  }
+  //  if (_title == nil){
+  //    _title = @"No Title";
+  //  }
   
   // Uncomment the following line to preserve selection between presentations.
   // self.clearsSelectionOnViewWillAppear = NO;
@@ -46,29 +46,28 @@ NSString * _title;
 }
 
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-  // Return the number of sections.
-  return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
   // Return the number of rows in the section.
-  return 0;
+  return [_tweetsList count];
 }
 
-/*
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
- {
- UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
- 
- // Configure the cell...
- 
- return cell;
- }
- */
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier"];
+  
+  // Configure the cell...
+  if (cell == nil){
+    cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseIdentifier"];
+  }
+  STTweet * temp =(STTweet *)[_tweetsList objectAtIndex:indexPath.row];
+  cell.detailTextLabel.text = temp.text;
+  cell.textLabel.text = temp.username;
+  
+  return cell;
+}
+
 
 /*
  // Override to support conditional editing of the table view.

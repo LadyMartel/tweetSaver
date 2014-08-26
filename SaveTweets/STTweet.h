@@ -10,4 +10,11 @@
 
 @interface STTweet : NSObject
 
++(STTweet *)tweetFromTwitterDictionary:(NSDictionary *) jsonDict;
++(STTweet *)tweetFromCoreDataDictionary:(NSDictionary *) jsonDict;
+
+@property (strong, nonatomic) NSString * text;
+@property (strong, nonatomic) NSString * username;
+@property NSInteger tweetID;
+
 @end

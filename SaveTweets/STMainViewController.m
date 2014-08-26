@@ -8,45 +8,64 @@
 
 #import "STMainViewController.h"
 #import "STTableViewController.h"
+#import "STAppDelegate.h"
+#import "STTweet.h"
 
-@interface STMainViewController ()
-
-@end
-
-@implementation STMainViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+@implementation STMainViewController{
+  
+  NSManagedObjectContext *context;
+  NSEntityDescription *entityDesc;
+  NSFetchRequest *request;
+  
+  ACAccountStore* _accountStore;
+  ACAccountType*_accountType;
+  SLRequest *slrequest;
+  
+  //  NSManagedObject *newTweet;
+  NSMutableArray * _tweetList;
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+  [super viewDidLoad];
+  /* sets up handling search */
   [_searchQuery setDelegate: self];
+  
+  /* sets up the context, entityDesc, request */
+  STAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+  context = [appDelegate managedObjectContext];
+  entityDesc = [NSEntityDescription entityForName:@"STTweet" inManagedObjectContext:context];
+  request = [[NSFetchRequest alloc] init];
+  [request setEntity:entityDesc];
+  
+  /* asks for permission to access twitter account */
+  _accountStore = [[ACAccountStore alloc] init];
+  _accountType = [_accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+  
+  [self askForPermissionTwitter];
+  _tweetList = [NSMutableArray array];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)askForPermissionTwitter{
+  [_accountStore requestAccessToAccountsWithType:_accountType options:nil completion:^(BOOL granted, NSError *error) {
+    if (!granted) {
+      NSLog(@"Access denied.");
+    }
+    else {
+      NSLog (@"Access given");
+      
+      if ([[_accountStore accountsWithAccountType:_accountType] count] < 1){
+        UIAlertView * errorPopup = [[UIAlertView alloc]
+                                    initWithTitle:@"Error"
+                                    message:@"No twitter accounts found on device. Please login through another app."
+                                    delegate:nil
+                                    cancelButtonTitle:@"OK"
+                                    otherButtonTitles: nil];
+        [errorPopup show];
+      }
+    }
+  }];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -57,6 +76,43 @@
 
 
 - (IBAction)handleSearch:(id)sender {
+  if([_searchQuery.text length] <= 0){
+    UIAlertView * errorPopup = [[UIAlertView alloc]
+                                initWithTitle:@"Error"
+                                message:@"Please enter a term to search"
+                                delegate:nil
+                                cancelButtonTitle:@"OK"
+                                otherButtonTitles: nil];
+    [errorPopup show];
+    
+  }else{
+    NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json"];
+    NSDictionary *params = @{ @"q": _searchQuery.text};
+    slrequest = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:url parameters:params];
+    
+    slrequest.account = [_accountStore accountsWithAccountType:_accountType].firstObject;
+    
+    [slrequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+      if (responseData) {
+        if (urlResponse.statusCode >= 200 && urlResponse.statusCode < 300) {
+          NSError *jsonError;
+          NSDictionary *tweetsData = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&jsonError];
+          if (tweetsData) {
+            //            NSLog(@"Tweets: %@", [tweetsData objectForKey:@"statuses"]);
+            for (NSDictionary *d in [tweetsData objectForKey:@"statuses"]){
+              [_tweetList addObject:[STTweet tweetFromTwitterDictionary:d]];
+            }
+            NSLog(@"%d", [_tweetList count]);
+          } else {
+            NSLog(@"Error when serializing from JSON: %@", jsonError.localizedDescription);
+          }
+        } else {
+          NSLog(@"Request not considered successful, status code: %ld, description: %@", (long)urlResponse.statusCode, urlResponse.debugDescription);
+        }
+      }
+    }];
+  }
+  
 }
 
 - (IBAction)handleViewSavedTweets:(id)sender {
@@ -72,11 +128,14 @@
   if([[segue identifier] isEqualToString:@"search"]){
     next = (STTableViewController *)[segue destinationViewController];
     [next setTitle: [NSString stringWithFormat: @"Searching: %@ ", _searchQuery.text]];
-//
+    NSLog(@"here?");
+    // Passes the tweet list
+    next.tweetsList = _tweetList;
+
   }else if([[segue identifier] isEqualToString:@"save"]){
     next = (STTableViewController *)[segue destinationViewController];
-//    next = (STTableViewController *)[segue destinationViewController];
-//    [next setTitle: @"Saved Tweets"];
+    //    next = (STTableViewController *)[segue destinationViewController];
+    //    [next setTitle: @"Saved Tweets"];
   }
 }
 
